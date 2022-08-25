@@ -9,24 +9,32 @@ interface Iprops{
 }
 interface Istate{
     name:String;
+    value:String;
 }
 
 let ChooseImage:React.FC=()=>{
-     var val=''
+     var val='20'
     let [state, setState] = useState<Istate>({
-        name: ''
-
+        name: 'Linux 2',
+        value: '20'
     });
-    const name= 'Server Image'//(`${instname}`);
+    //const name= 'Server Image'//(`${instname}`);
     // The selected drink
   const [selectedLinux, setSelectedLinux] = useState<String>('20');
 
 const isRedioLinux=(value:String):boolean=>selectedLinux===value;
   // This function will be triggered when a radio button is selected
+  
   const radioLinux = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedLinux(event.target.value);
+    val=(event.target.value)
+    setState({
+        name:'Linux 2',
+        value:val
    
+    })
   };
+
 //   val=Number(`${selectedLinux}`);
     const [selectedUbuntu, setSelectedUbuntu] = useState<String>('20');
     
@@ -34,6 +42,12 @@ const isRedioUbuntu=(value:String):boolean=>selectedUbuntu===value;
   // This function will be triggered when a radio button is selected
   const radioUbuntu = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedUbuntu(event.target.value);
+    val=(event.target.value)
+    setState({
+        name:'Ubuntu',
+        value:val
+   
+    })
    // val={selectedUbuntu}
   };
 //   val=Number(`${selectedUbuntu}`);
@@ -43,15 +57,27 @@ const isRedioRedHat=(value:String):boolean=>selectedRedHat===value;
   // This function will be triggered when a radio button is selected
   const radioRedHat = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedRedHat(event.target.value);
+    val=(event.target.value)
+    setState({
+        name:'Red Hat',
+        value:val
+   
+    })
     //val={selectedRedHat}
   };
 //   val=Number(`${selectedRedHat}`);
-  const [selectedMicroSoft, setSelectedMicroSoft] = useState<String>('20');
+  const [selectedMicroSoft, setSelectedMicroSoft] = useState<String>('0');
 
 const isRedioMicroSoft=(value:String):boolean=>selectedMicroSoft===value;
   // This function will be triggered when a radio button is selected
   const radioMicroSoft = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedMicroSoft(event.target.value);
+    val=(event.target.value)
+    setState({
+        name:'MicroSoft',
+        value:val
+   
+    })
    // val={selectedMicroSoft}
   };
 //   val=Number(`${selectedMicroSoft}`);
@@ -61,6 +87,12 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
   // This function will be triggered when a radio button is selected
   const radioSuse = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedSuse(event.target.value);
+    val=(event.target.value)
+    setState({
+        name:'Suse',
+        value:val
+   
+    })
    // val={selectedSuse}
   };
 //   val=Number(`${selectedSuse}`);
@@ -352,11 +384,11 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                                 <Card.Body>
                                     <Card.Title>Cost Estimates</Card.Title>
                                     <Card.Text>
-                                    {name}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ${selectedLinux}
+                                    {state.name}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;${state.value}
                                     </Card.Text>
                                 <hr></hr>
                                 
-                                Total&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;${selectedLinux} /mo
+                                Total&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;${state.value} /mo
                                 </Card.Body>
                             </Card>
                         </div>

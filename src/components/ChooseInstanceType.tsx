@@ -7,7 +7,7 @@ interface Istate{
     count:number;
 }
 interface IstateName{
-    name:string;
+   name :string;
 }
 interface URLParamas{
 }
@@ -15,10 +15,11 @@ interface URLParamas{
 let ChooseInstanceType:React.FC=()=>{
     // let {id}=useParams<URLParamas|any>();
     let {instname}=useParams<URLParamas|any>();
+    let {id}=useParams<URLParamas|any>();
     const num = Number('2020');
     // var val = Number(`${id}`);
-    const name= 'Image'//(`${instname}`);
-   
+    const name= (`${instname}`);
+   const instVal=(`${id}`)
     let [state,setState]=useState<Istate>({
         count:0
     });
@@ -158,8 +159,7 @@ let ChooseInstanceType:React.FC=()=>{
                                 <Card.Body>
                                     <Card.Title>Cost Estimates</Card.Title>
                                     <Card.Text>
-                                        {name}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; $0
-                                        <br/>
+                                        
                                         Core&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; ${value}
                                         <br/>
                                         Memory&emsp;&emsp;&emsp;&emsp;&emsp; ${priceName}
