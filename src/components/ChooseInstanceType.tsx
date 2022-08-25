@@ -40,7 +40,7 @@ let ChooseInstanceType:React.FC=()=>{
     //     const value = "Orange";
     //     return value;
     //   };
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
 //     const isRedioLinux=(value:boolean):boolean=>show===value;
 //   // This function will be triggered when a radio button is selected
