@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
+import {useParams} from 'react-router-dom';
 interface Iprops{}
 interface Istate{}
-
+interface URLParamas{
+}
 let ChooseStorageAndNetwork:React.FC=()=>{
+    let {id}=useParams<URLParamas|any>();
+    const instVal=(`${id}`)
     const [selected, setSelected] = useState<String>('20');
     const [value, setValue] = useState<String>('6')
 
@@ -31,7 +35,7 @@ let ChooseStorageAndNetwork:React.FC=()=>{
         setSelected(event.target.value);
        
       };
-      var price=Number(`${value}`)+Number(`${selected}`)+Number(`${encryption}`)+Number(`${backUp}`);
+      var price=Number(`${value}`)+Number(`${selected}`)+Number(`${encryption}`)+Number(`${backUp}`)+Number(instVal);;
 
 const [val,setVal]=useState([])
     return(
@@ -292,8 +296,8 @@ const [val,setVal]=useState([])
                     
             <div className="row">
                         <div className="col">
-                            <Link to={"/chooseinstancetype"} className="btn btn-dark mt-3 m-1">Back</Link>
-                            <Link to={"/configuresecurity"} className="btn btn-success mt-3 m-1">Proceed</Link>
+                            <Link to={`/chooseinstancetype/${id}`} className="btn btn-dark mt-3 m-1">Back</Link>
+                            <Link to={`/configuresecurity/${price}`} className="btn btn-success mt-3 m-1">Proceed</Link>
                         </div>
                     </div>
             </div>

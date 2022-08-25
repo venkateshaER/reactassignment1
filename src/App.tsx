@@ -73,9 +73,9 @@ function App() {
       <Route path={'/'} element={<Navigate to={'/chooseimage'}/>}/>
       <Route path={'/chooseimage'} element={<ChooseImage/>}/>
       {/* <Route path={'/chooseinstancetype/:instname'} element={<ChooseInstanceType/>}/> */}
-      <Route path={'/chooseinstancetype'} element={<ChooseInstanceType/>}/>
-      <Route path={'/choosestorageandnetwork'} element={<ChooseStorageAndNetwork/>}/>
-      <Route path={'/configuresecurity'} element={<ConfigureSecurity/>}/>
+      <Route path={'/chooseinstancetype/:id'} element={<ChooseInstanceType/>}/>
+      <Route path={'/choosestorageandnetwork/:id'} element={<ChooseStorageAndNetwork/>}/>
+      <Route path={'/configuresecurity/:id'} element={<ConfigureSecurity/>}/>
       <Route path={'/reviewandlanch'} element={<ReviewAndLanch/>}/>
       </Routes>
        </React.Fragment>

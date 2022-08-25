@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
+import {useParams} from 'react-router-dom';
+interface URLParamas{
+}
 interface Iprops{}
 interface Istate{}
 
 let ConfigureSecurity:React.FC=()=>{
+    let {id}=useParams<URLParamas|any>();
+    const instVal=(`${id}`)
     const [selected, setSelected] = useState<String>('20');
 
 const isRedio=(value:String):boolean=>selected===value;
@@ -18,7 +23,7 @@ const isRedio=(value:String):boolean=>selected===value;
     setValue(event.target.value);
    // val={selectedSuse}
   };
-  var price=Number(`${value}`)
+  var price=Number(`${value}`)+Number(instVal);
   
     return(
         <React.Fragment>
@@ -228,8 +233,8 @@ const isRedio=(value:String):boolean=>selected===value;
                         }
             <div className="row">
                         <div className="col">
-                            <Link to={"/choosestorageandnetwork"} className="btn btn-dark mt-3 m-1">Back</Link>
-                            <Link to={"/reviewandlanch"} className="btn btn-success mt-3 m-1">Proceed</Link>
+                            <Link to={`/choosestorageandnetwork/${id}`} className="btn btn-dark mt-3 m-1">Back</Link>
+                            <Link to={`/reviewandlanch`} className="btn btn-success mt-3 m-1">Proceed</Link>
                         </div>
                     </div>
             </div>

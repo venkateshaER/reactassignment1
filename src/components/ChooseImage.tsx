@@ -143,7 +143,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                             <div className="row">
                         <p className="card-text">
                     {/* <Link to={`/chooseinstancetype/${selectedLinux}/Linux-2`} className="text-decoration-none text-success fw-bold"> Linux 2 Image</Link> */}
-                    <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold"> Linux 2 Image</Link>
+                    <Link to={`/chooseinstancetype/${selectedLinux}`} className="text-decoration-none text-success fw-bold"> Linux 2 Image</Link>
                    
                     <br/>Linux 2 comes with 5 years of support. It provides Linux kernel 4.14 tuned for optimal performance
                     </p>
@@ -194,7 +194,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                     <div className="container">
                             <div className="row">
                         <p className="card-text">
-                    <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold">Ubuntu Server 18.04 LTS</Link>
+                    <Link to={`/chooseinstancetype/${selectedUbuntu}`} className="text-decoration-none text-success fw-bold">Ubuntu Server 18.04 LTS</Link>
                     <br/>Ubuntu Server comes with 5 years of support. It provides optimal performance
                     </p>
                    </div>
@@ -243,7 +243,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                     <div className="container">
                             <div className="row">
                         <p className="card-text">
-                    <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold">Red Hat EnterPrise Linux 8</Link>
+                    <Link to={`/chooseinstancetype/${selectedRedHat}`} className="text-decoration-none text-success fw-bold">Red Hat EnterPrise Linux 8</Link>
                     <br/>Red Hat EnterPrise comes with 5 years of support. It provides Linux kernel tuned for optimal performance
                     </p>
                    </div>
@@ -291,7 +291,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                             <div className="container">
                             <div className="row">
                     <div className="col-9">
-                    <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold">MicroSoft Windows Server 2019 Base</Link>
+                    <Link to={`/chooseinstancetype/${selectedMicroSoft}`} className="text-decoration-none text-success fw-bold">MicroSoft Windows Server 2019 Base</Link>
                     <br/>MicroSoft Windows comes with 5 years of support. It provides tuned for optimal performance
                    
                     </div>
@@ -339,7 +339,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                             <div className="container">
                             <div className="row">
                     <div className="col-9">
-                    <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold">Suse Linux Enterprise Server</Link>
+                    <Link to={`/chooseinstancetype/${selectedSuse}`} className="text-decoration-none text-success fw-bold">Suse Linux Enterprise Server</Link>
                     <br/>Suse Linux comes with 5 years of support. It provides Linux kernel tuned for optimal performance
                    
                     </div>

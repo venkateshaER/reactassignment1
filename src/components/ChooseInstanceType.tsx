@@ -53,7 +53,7 @@ let ChooseInstanceType:React.FC=()=>{
       const [value, setValue] = useState<String>('1')
       const [priceName, setPriceName] = useState<String>('1')
       const [stateId, setStateId] = useState<String>('region')
-      var price=Number(`${value}`)+Number(`${priceName}`);
+      var price=Number(`${value}`)+Number(`${priceName}`)+Number(instVal);
     //   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
     //     setValue(e.target.value);
     //   };
@@ -176,7 +176,7 @@ let ChooseInstanceType:React.FC=()=>{
                         <div className="row">
                         <div className="col">
                             <Link to={"/"} className="btn btn-dark mt-3 m-1">Back</Link>
-                            <Link to={"/choosestorageandnetwork"} className="btn btn-success mt-3 m-1">Proceed</Link>
+                            <Link to={`/choosestorageandnetwork/${price}`} className="btn btn-success mt-3 m-1">Proceed</Link>
                         </div>
                     </div>
                     </div>
