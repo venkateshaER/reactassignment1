@@ -18,11 +18,13 @@ let Coustomer:React.FC<Iprops>=({name,age,title})=>{
                 <li className="list-group-item">
                     Age: {age}
                 </li>
+                
                 <li className="list-group-item">
                     Title: {title}
                 </li>
             </ul>
         </React.Fragment>
+        
     )
 };
 

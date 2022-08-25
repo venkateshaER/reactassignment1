@@ -5,12 +5,12 @@ interface Iprops{}
 interface Istate{}
 
 let ConfigureSecurity:React.FC=()=>{
-    const [selectedLinux, setSelectedLinux] = useState<String>('20');
+    const [selected, setSelected] = useState<String>('20');
 
-const isRedioLinux=(value:String):boolean=>selectedLinux===value;
+const isRedio=(value:String):boolean=>selected===value;
   // This function will be triggered when a radio button is selected
-  const radioLinux = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedLinux(event.target.value);
+  const radio = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelected(event.target.value);
    
   };
   const [value, setValue] = useState<String>('6')
@@ -57,8 +57,8 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
                                     name="linux"
                                     value="20"
                                     id="linux1"
-                                    onChange={radioLinux}
-                                    checked={isRedioLinux('20')}
+                                    onChange={radio}
+                                    checked={isRedio('20')}
                                 />
                                 <label>&nbsp;Create a new security group</label>
                                 </p>
@@ -74,8 +74,8 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
                                     name="linux"
                                     value="10"
                                     id="linux2"
-                                    onChange={radioLinux}
-                                    checked={isRedioLinux('10')}
+                                    onChange={radio}
+                                    checked={isRedio('10')}
                                 />
                                 <label>&nbsp;Select an existing security group</label>
                                 </p>
@@ -104,7 +104,7 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
                         </div>
                         </div>
                         
-                        { (selectedLinux==='20') && 
+                        { (selected==='20') && 
                             
                        
                         <div className="row">
@@ -118,8 +118,8 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
                             </div>
                         </div>
                         }
-                        { (selectedLinux==='20') && 
-
+                        { (selected==='20') && 
+                            
                         <div className="row">
                     <div className="col-9">
                     <div className="card shadow-lg mt-3">
@@ -144,6 +144,7 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
          
         </select>
                 </div>
+                
                 
                 <div className="col-2">
                    <p className="text-center fw-bold mt-3 small">Protocol</p>
@@ -203,12 +204,12 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
                         
                     </div>
                     }
-                    { (selectedLinux==='10') &&
+                    { (selected==='10') &&
 
                     <div className="row">
                             <div className="col-4">
                             <p className="fw-bold mt-3 h4">Select Security Group</p>
-                            <select className='btn btn-outline-dark dropdown-toggle'>
+                            <select className='btn btn-outline-dark dropdown-toggle' onChange={handleChange}>
        
        <option id="SC-1" value="6" >Security SC 1</option>
        <option id="SC-2" value="7">Security SC 2</option>
@@ -219,7 +220,8 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
        <option id="Group-29" value="12" >Group 29</option>
        <option id="RT-7" value="13">Security RT 7</option>
        <option id="SGX-8" value="14">SGX 8 </option>
-      
+
+
      </select>
                             </div>
                         </div>
