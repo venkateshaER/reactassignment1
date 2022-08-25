@@ -17,6 +17,7 @@ let ChooseImage:React.FC=()=>{
         name: ''
 
     });
+    const name= 'Image'//(`${instname}`);
     // The selected drink
   const [selectedLinux, setSelectedLinux] = useState<String>('20');
 
@@ -351,11 +352,11 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                                 <Card.Body>
                                     <Card.Title>Cost Estimates</Card.Title>
                                     <Card.Text>
-                                        Sample
+                                    {name}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; $0
                                     </Card.Text>
                                 <hr></hr>
                                 
-                                $0/mo
+                                Total&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$0 /mo
                                 </Card.Body>
                             </Card>
                         </div>

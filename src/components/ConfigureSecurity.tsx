@@ -13,8 +13,12 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
     setSelectedLinux(event.target.value);
    
   };
-
-  
+  const [value, setValue] = useState<String>('6')
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setValue(event.target.value);
+   // val={selectedSuse}
+  };
+  var price=Number(`${value}`)
   
     return(
         <React.Fragment>
@@ -88,12 +92,12 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
                                 <Card.Body>
                                     <Card.Title>Cost Estimates</Card.Title>
                                     <Card.Text>
-                                        $0
+                                    Security Type &emsp;&emsp;&emsp;&emsp; ${value}
                                     </Card.Text>
                                 <hr></hr>
-                                
+                                Total&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;${price} /mo
                                {/* $ {state.count} /mo */}
-                               0$ /mo
+                             
                                 </Card.Body>
                             </Card>
                         </div>
@@ -132,7 +136,7 @@ const isRedioLinux=(value:String):boolean=>selectedLinux===value;
                 <div className="row">
                 <div className="col-2">
                    <p className="fw-bold mt-3 small">&emsp;&emsp;Type</p>
-                   <select className='btn btn-outline-dark dropdown-toggle'>
+                   <select className='btn btn-outline-dark dropdown-toggle' onChange={handleChange}>
        
           <option id="SSD" value="6" >HTTPS</option>
           <option id="SSH" value="7">SSH</option>
