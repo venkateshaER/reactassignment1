@@ -17,8 +17,8 @@ let ChooseInstanceType:React.FC=()=>{
     let {instname}=useParams<URLParamas|any>();
     const num = Number('2020');
     // var val = Number(`${id}`);
-    const name= (`${instname}`);
-
+    const name= 'Image'//(`${instname}`);
+   
     let [state,setState]=useState<Istate>({
         count:0
     });
@@ -28,7 +28,7 @@ let ChooseInstanceType:React.FC=()=>{
     
     let updateprice=()=>{
         setState({
-            count:state.count+1
+            count:1//state.count+(Number(`${value}`))+(Number(`${priceName}`))
         })
     };
     let fetchName=(nameOption:string):void=>{
@@ -136,11 +136,11 @@ let ChooseInstanceType:React.FC=()=>{
          
         </select>
         <select className='btn btn-outline-dark dropdown-toggle shadow-lg mt-3 m-1' onChange={handleChange1}>
-        <option id="1-Core" value="1">256MB</option>
-          <option id="2-Core" value="2">516MB</option>
-          <option id="4-Core" value="4" >1GB</option>
-          <option id="6-Core"  value="6" >4GB</option>
-          <option id="8-Core"  value="8" >8GB</option>
+        <option id="256MB" value="1">256MB</option>
+          <option id="516MB" value="2">516MB</option>
+          <option id="1GB" value="4" >1GB</option>
+          <option id="4GB"  value="6" >4GB</option>
+          <option id="8GB"  value="8" >8GB</option>
          
         </select>
                         </div>
@@ -158,11 +158,15 @@ let ChooseInstanceType:React.FC=()=>{
                                 <Card.Body>
                                     <Card.Title>Cost Estimates</Card.Title>
                                     <Card.Text>
-                                        {name} : $0
+                                        {name}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; $0
+                                        <br/>
+                                        Core&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; ${value}
+                                        <br/>
+                                        Memory&emsp;&emsp;&emsp;&emsp;&emsp; ${priceName}
                                     </Card.Text>
                                 <hr></hr>
                                 
-                               $ {state.count} /mo
+                               Total&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;${price} /mo
                                
                                 </Card.Body>
                             </Card>
