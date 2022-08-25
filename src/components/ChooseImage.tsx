@@ -12,7 +12,7 @@ interface Istate{
 }
 
 let ChooseImage:React.FC=()=>{
-    // var val=0;
+     var val=''
     let [state, setState] = useState<Istate>({
         name: ''
 
@@ -113,7 +113,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                     {/* <Link to={`/chooseinstancetype/${selectedLinux}/Linux-2`} className="text-decoration-none text-success fw-bold"> Linux 2 Image</Link> */}
                     <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold"> Linux 2 Image</Link>
                    
-                    <br/>Linux 2 comes with 5 years of support. It provides Linux kerner 4.14 tuned for optimal performance
+                    <br/>Linux 2 comes with 5 years of support. It provides Linux kernel 4.14 tuned for optimal performance
                     </p>
                    </div>
                    </div>
@@ -163,7 +163,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                             <div className="row">
                         <p className="card-text">
                     <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold">Ubuntu Server 18.04 LTS</Link>
-                    <br/>Linux 2 comes with 5 years of support. It provides Linux kerner 4.14 tuned for optimal performance
+                    <br/>Ubuntu Server comes with 5 years of support. It provides optimal performance
                     </p>
                    </div>
                    </div>
@@ -212,7 +212,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                             <div className="row">
                         <p className="card-text">
                     <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold">Red Hat EnterPrise Linux 8</Link>
-                    <br/>Linux 2 comes with 5 years of support. It provides Linux kerner 4.14 tuned for optimal performance
+                    <br/>Red Hat EnterPrise comes with 5 years of support. It provides Linux kernel tuned for optimal performance
                     </p>
                    </div>
                    </div>
@@ -260,7 +260,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                             <div className="row">
                     <div className="col-9">
                     <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold">MicroSoft Windows Server 2019 Base</Link>
-                    <br/>Linux 2 comes with 5 years of support. It provides Linux kerner 4.14 tuned for optimal performance
+                    <br/>MicroSoft Windows comes with 5 years of support. It provides tuned for optimal performance
                    
                     </div>
                     <div className="col">
@@ -308,7 +308,7 @@ const isRedioSuse=(value:String):boolean=>selectedSuse===value;
                             <div className="row">
                     <div className="col-9">
                     <Link to={`/chooseinstancetype`} className="text-decoration-none text-success fw-bold">Suse Linux Enterprise Server</Link>
-                    <br/>Linux 2 comes with 5 years of support. It provides Linux kerner 4.14 tuned for optimal performance
+                    <br/>Suse Linux comes with 5 years of support. It provides Linux kernel tuned for optimal performance
                    
                     </div>
                     <div className="col">
